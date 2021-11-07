@@ -364,7 +364,7 @@ std::optional<int*> SATSolver::solveHighPerfomanceNoStack(LogicFunction &logicFu
     int *literalStack = new int[logicFunction.getAmountOfLiterals()];
     bool *literalBranchStack = new bool[logicFunction.getAmountOfLiterals()];
     
-    int stackCup = 0;
+    int stackCup = -1;
     
     while (true) {
         
@@ -378,6 +378,10 @@ std::optional<int*> SATSolver::solveHighPerfomanceNoStack(LogicFunction &logicFu
         logicFunction.unitPropagationHighPerfArrayMapRetryHighPerf();
         
         if(!logicFunction.isCorrectFast()) {
+            
+            if(stackCup == -1) {
+                return std::nullopt;
+            }
             
             bool isCorrect = false;
             int amountOfRollbackSteps = 1;
@@ -428,6 +432,10 @@ std::optional<int*> SATSolver::solveHighPerfomanceNoStack(LogicFunction &logicFu
             
             if (logicFunction.isCorrectFast()) continue;
             /* ??? END ??? */
+            
+            if(stackCup == -1) {
+                return std::nullopt;
+            }
             
             bool isCorrect = false;
             

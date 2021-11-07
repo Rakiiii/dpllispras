@@ -2148,6 +2148,40 @@
 			<key>uniqueIdentifier</key>
 			<string>4AEF2198-76A7-4AD9-9F39-96C8BBF5280B</string>
 		</dict>
+		<key>4B0E2532-0609-401A-8086-08423D93A5AE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4B0E2532-0609-401A-8086-08423D93A5AE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_unsat_small</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658016184.46114397</real>
+			<key>timeStoppedRecording</key>
+			<real>658016187.38250601</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>4B0E2532-0609-401A-8086-08423D93A5AE</string>
+		</dict>
 		<key>4B1BB70B-4240-4725-82BB-ACBB6908311A</key>
 		<dict>
 			<key>className</key>
@@ -5888,6 +5922,40 @@
 			<key>uniqueIdentifier</key>
 			<string>B30F102B-0957-47CE-AC09-B10C09AAE844</string>
 		</dict>
+		<key>B33204FA-94B7-422A-97F6-7F43A63CD6DB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B33204FA-94B7-422A-97F6-7F43A63CD6DB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_unsat_small</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658014886.42150199</real>
+			<key>timeStoppedRecording</key>
+			<real>658014889.83051598</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>B33204FA-94B7-422A-97F6-7F43A63CD6DB</string>
+		</dict>
 		<key>B3D2CB71-E2D8-446D-9DDA-0945EE535DDD</key>
 		<dict>
 			<key>className</key>
@@ -6330,6 +6398,74 @@
 			<key>uniqueIdentifier</key>
 			<string>C65DAE59-3959-4C3F-B1D4-B9550B510A2B</string>
 		</dict>
+		<key>C70AA4EE-F471-43FB-9906-6BBC0CE28C6E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C70AA4EE-F471-43FB-9906-6BBC0CE28C6E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_unsat_small</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658014922.10202897</real>
+			<key>timeStoppedRecording</key>
+			<real>658014923.04621899</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>C70AA4EE-F471-43FB-9906-6BBC0CE28C6E</string>
+		</dict>
+		<key>C77AD698-F1F6-4FAE-AA8E-DF4444DC5D88</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C77AD698-F1F6-4FAE-AA8E-DF4444DC5D88.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_sat</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658016207.612849</real>
+			<key>timeStoppedRecording</key>
+			<real>658016208.55975103</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>C77AD698-F1F6-4FAE-AA8E-DF4444DC5D88</string>
+		</dict>
 		<key>C8A18164-DE18-4C69-9EAE-0D1A8A20ED2F</key>
 		<dict>
 			<key>className</key>
@@ -6431,6 +6567,40 @@
 			<string>Run DPLLHighPerfomance</string>
 			<key>uniqueIdentifier</key>
 			<string>C97281AE-C99D-43D1-954C-AD968B882747</string>
+		</dict>
+		<key>CA06B874-A226-4D2E-9A52-19A02393D558</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CA06B874-A226-4D2E-9A52-19A02393D558.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_unsat_small</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658016199.83874702</real>
+			<key>timeStoppedRecording</key>
+			<real>658016200.775172</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>CA06B874-A226-4D2E-9A52-19A02393D558</string>
 		</dict>
 		<key>CB01DE97-A1D7-4711-8C12-3072ABC54C0C</key>
 		<dict>
@@ -7180,6 +7350,40 @@
 			<key>uniqueIdentifier</key>
 			<string>E918B4CD-DBF4-4C4C-AB7D-6A303E9FDEC6</string>
 		</dict>
+		<key>E9FF09F3-BDCB-472B-8A0B-A54FC4CD9D0C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E9FF09F3-BDCB-472B-8A0B-A54FC4CD9D0C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_benchmark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658010453.48019505</real>
+			<key>timeStoppedRecording</key>
+			<real>658010478.94959605</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>E9FF09F3-BDCB-472B-8A0B-A54FC4CD9D0C</string>
+		</dict>
 		<key>ECDBDC72-6760-4E1B-8120-CC1879A67AC5</key>
 		<dict>
 			<key>className</key>
@@ -7485,6 +7689,40 @@
 			<string>Run DPLLHighPerfomance</string>
 			<key>uniqueIdentifier</key>
 			<string>F642BBCB-4E77-46E8-B861-0B9A6EEFF97B</string>
+		</dict>
+		<key>F6A7069B-929A-47B4-A229-2888F2ADF2EA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F6A7069B-929A-47B4-A229-2888F2ADF2EA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_benchmark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658016220.07734704</real>
+			<key>timeStoppedRecording</key>
+			<real>658016247.18185401</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>F6A7069B-929A-47B4-A229-2888F2ADF2EA</string>
 		</dict>
 		<key>F6FDED02-4025-406B-B10D-CC3682C16865</key>
 		<dict>
