@@ -26,8 +26,8 @@ LogicFunction* DMACSParser::parse(const std::string& path) {
         if(line.empty() || line[0] == 'c') continue;
         
         if (line[0] != 'p') {
-            return NULL;
-//            throw std::runtime_error("The 'p' symbol was expected while parcing, but find line: " + line);
+//            return NULL;
+            throw std::runtime_error("The 'p' symbol was expected while parcing, but find line: " + line);
         } else {
             
             char p;
@@ -37,8 +37,8 @@ LogicFunction* DMACSParser::parse(const std::string& path) {
             deconstructStream >> p >> cnf >> amountOfLiterals >> amountOfClauses;
             
             if(cnf != "cnf") {
-                return NULL;
-//                throw std::runtime_error("No cnf found or file end found, cnf state: " + cnf);
+//                return NULL;
+                throw std::runtime_error("No cnf found or file end found, cnf state: " + cnf);
             }
             
             break;
@@ -52,8 +52,8 @@ LogicFunction* DMACSParser::parse(const std::string& path) {
         if(line.empty()|| line[0] == 'c' || line[0] == '%') continue;
         
         if (line[0] == 'p') {
-            return NULL;
-//            throw std::runtime_error("Found unexpected parameter symbol at line: " + line);
+//            return NULL;
+            throw std::runtime_error("Found unexpected parameter symbol at line: " + line);
         }
         
         int literal;
