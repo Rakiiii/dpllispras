@@ -9,6 +9,7 @@
 #define sat_solver_hpp
 
 #include "logic_function.hpp"
+#include <optional>
 #include <stack>
 #include <iostream>
 

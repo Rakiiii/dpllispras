@@ -3610,6 +3610,40 @@
 			<key>uniqueIdentifier</key>
 			<string>6FFAF987-3743-426F-A6CD-2DCD76B5EBB3</string>
 		</dict>
+		<key>701FD5C5-146E-4DEA-81B6-7D47EA445AF8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>701FD5C5-146E-4DEA-81B6-7D47EA445AF8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_unsat_small</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658009965.97880101</real>
+			<key>timeStoppedRecording</key>
+			<real>658009967.06488299</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>701FD5C5-146E-4DEA-81B6-7D47EA445AF8</string>
+		</dict>
 		<key>7139F147-FD62-4AFB-BE72-9177459C2E01</key>
 		<dict>
 			<key>className</key>
@@ -4833,6 +4867,40 @@
 			<string>Run DPLLHighPerfomance</string>
 			<key>uniqueIdentifier</key>
 			<string>9BA83306-86CB-4C77-9364-E89E6F806EA0</string>
+		</dict>
+		<key>9CE7D89C-7C36-4F91-AB79-80395CF3DEC8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9CE7D89C-7C36-4F91-AB79-80395CF3DEC8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_benchmark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658009975.40607595</real>
+			<key>timeStoppedRecording</key>
+			<real>658010002.52427399</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>9CE7D89C-7C36-4F91-AB79-80395CF3DEC8</string>
 		</dict>
 		<key>9F9F55E6-858E-4DFA-8925-CA7C2FAC65C1</key>
 		<dict>
@@ -6737,6 +6805,40 @@
 			<string>Run DPLLHighPerfomance</string>
 			<key>uniqueIdentifier</key>
 			<string>DB0EBF7D-E408-4E32-B05C-95F3345DEB92</string>
+		</dict>
+		<key>DBD99CFB-E6E7-4815-A01C-316A8DB865FE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DBD99CFB-E6E7-4815-A01C-316A8DB865FE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>DPLLHighPerfomance project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>DPLLHighPerfomance_sat</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>timeStartedRecording</key>
+			<real>658009947.43861699</real>
+			<key>timeStoppedRecording</key>
+			<real>658009951.34447396</real>
+			<key>title</key>
+			<string>Run DPLLHighPerfomance</string>
+			<key>uniqueIdentifier</key>
+			<string>DBD99CFB-E6E7-4815-A01C-316A8DB865FE</string>
 		</dict>
 		<key>DED3BAAB-8E58-4829-AFE1-26D2D078463A</key>
 		<dict>
