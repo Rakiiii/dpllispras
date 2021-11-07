@@ -11,6 +11,7 @@
 #include <optional>
 #include <set>
 #include <iostream>
+#include <cstring>
 #include "clause_node.hpp"
 
 
