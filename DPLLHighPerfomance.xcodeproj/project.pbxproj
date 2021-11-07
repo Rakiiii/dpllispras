@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2DDCA16E2732804100E41678 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCA16D2732804100E41678 /* main.cpp */; };
+		2DDCA1762732807E00E41678 /* dmacs_parcer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCA1742732807E00E41678 /* dmacs_parcer.cpp */; };
+		2DDCA179273280CE00E41678 /* logic_function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCA177273280CE00E41678 /* logic_function.cpp */; };
+		2DDCA17C2732810F00E41678 /* clause_node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCA17A2732810F00E41678 /* clause_node.cpp */; };
+		2DDCA17F2732812B00E41678 /* literal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCA17D2732812B00E41678 /* literal.cpp */; };
+		2DDCA1822732A33600E41678 /* sat_solver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCA1802732A33600E41678 /* sat_solver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		2DDCA16A2732804100E41678 /* DPLLHighPerfomance */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DPLLHighPerfomance; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDCA16D2732804100E41678 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2DDCA1742732807E00E41678 /* dmacs_parcer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dmacs_parcer.cpp; sourceTree = "<group>"; };
+		2DDCA1752732807E00E41678 /* dmacs_parcer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dmacs_parcer.hpp; sourceTree = "<group>"; };
+		2DDCA177273280CE00E41678 /* logic_function.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = logic_function.cpp; sourceTree = "<group>"; };
+		2DDCA178273280CE00E41678 /* logic_function.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = logic_function.hpp; sourceTree = "<group>"; };
+		2DDCA17A2732810F00E41678 /* clause_node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = clause_node.cpp; sourceTree = "<group>"; };
+		2DDCA17B2732810F00E41678 /* clause_node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = clause_node.hpp; sourceTree = "<group>"; };
+		2DDCA17D2732812B00E41678 /* literal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = literal.cpp; sourceTree = "<group>"; };
+		2DDCA17E2732812B00E41678 /* literal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = literal.hpp; sourceTree = "<group>"; };
+		2DDCA1802732A33600E41678 /* sat_solver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sat_solver.cpp; sourceTree = "<group>"; };
+		2DDCA1812732A33600E41678 /* sat_solver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sat_solver.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				2DDCA16D2732804100E41678 /* main.cpp */,
+				2DDCA17D2732812B00E41678 /* literal.cpp */,
+				2DDCA17E2732812B00E41678 /* literal.hpp */,
+				2DDCA1752732807E00E41678 /* dmacs_parcer.hpp */,
+				2DDCA178273280CE00E41678 /* logic_function.hpp */,
+				2DDCA177273280CE00E41678 /* logic_function.cpp */,
+				2DDCA1742732807E00E41678 /* dmacs_parcer.cpp */,
+				2DDCA17A2732810F00E41678 /* clause_node.cpp */,
+				2DDCA17B2732810F00E41678 /* clause_node.hpp */,
+				2DDCA1802732A33600E41678 /* sat_solver.cpp */,
+				2DDCA1812732A33600E41678 /* sat_solver.hpp */,
 			);
 			path = DPLLHighPerfomance;
 			sourceTree = "<group>";
@@ -119,7 +144,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDCA17F2732812B00E41678 /* literal.cpp in Sources */,
 				2DDCA16E2732804100E41678 /* main.cpp in Sources */,
+				2DDCA1762732807E00E41678 /* dmacs_parcer.cpp in Sources */,
+				2DDCA1822732A33600E41678 /* sat_solver.cpp in Sources */,
+				2DDCA17C2732810F00E41678 /* clause_node.cpp in Sources */,
+				2DDCA179273280CE00E41678 /* logic_function.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +270,13 @@
 		2DDCA1722732804100E41678 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THREADSAFE_STATICS = YES;
+				GCC_UNROLL_LOOPS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,7 +284,14 @@
 		2DDCA1732732804100E41678 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_THREADSAFE_STATICS = YES;
+				GCC_UNROLL_LOOPS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
