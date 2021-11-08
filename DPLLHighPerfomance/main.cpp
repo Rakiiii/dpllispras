@@ -7,28 +7,25 @@
 
 #include <iostream>
 #include <chrono>
+#include <filesystem>
 #include "sat_solver.hpp"
 #include "dmacs_parcer.hpp"
 
-int main(int argc, const char * argv[]) {
-    std::vector<std::string> argList(argv, argv + argc);
-
-    auto argsPath = argList.begin();
-    ++argsPath;
-    for(;argsPath != argList.end(); ++ argsPath){
-        std::string path = *argsPath;
+void solveDir(std::string& path) {
+    for (const auto & entry : std::filesystem::directory_iterator(path)){
+        std::string file = entry.path();
         
-        LogicFunction *logicFunction = DMACSParser::parse(path);
+        LogicFunction *logicFunction = DMACSParser::parse(file);
         
-        std::cout << "/---------------Start DPLL-----------/"<<std::endl<< std::endl;
+        std::cout << "/---------------Start DPLL-----------"<<"file: "<<file<<"/"<<std::endl<< std::endl;
         
         using std::chrono::high_resolution_clock;
         using std::chrono::duration_cast;
         using std::chrono::milliseconds;
         
         auto startTime = high_resolution_clock::now();
-//        auto result = SATSolver::solveTest(*logicFunction);
-//        auto result = SATSolver::solveHighPerfomance(*logicFunction);
+        //        auto result = SATSolver::solveTest(*logicFunction);
+        //        auto result = SATSolver::solveHighPerfomance(*logicFunction);
         auto result = SATSolver::solveHighPerfomanceNoStack(*logicFunction);
         auto endTime = high_resolution_clock::now();
         
@@ -44,6 +41,50 @@ int main(int argc, const char * argv[]) {
             std::cout<<"isCorrect: "<<(logicFunction->isCorrectOnVector() ? "CORRECT" : "INCORRECT")<<std::endl;
         } else {
             std::cout << "UNSAT" << std::endl;
+        }
+    }
+}
+
+int main(int argc, const char * argv[]) {
+    std::vector<std::string> argList(argv, argv + argc);
+    
+    auto argsPath = argList.begin();
+    ++argsPath;
+    
+    if (*argsPath == "-dir") {
+        ++argsPath;
+        solveDir(*argsPath);
+    } else {
+        for(;argsPath != argList.end(); ++ argsPath){
+            std::string path = *argsPath;
+            
+            LogicFunction *logicFunction = DMACSParser::parse(path);
+            
+            std::cout << "/---------------Start DPLL-----------/"<<std::endl<< std::endl;
+            
+            using std::chrono::high_resolution_clock;
+            using std::chrono::duration_cast;
+            using std::chrono::milliseconds;
+            
+            auto startTime = high_resolution_clock::now();
+            //        auto result = SATSolver::solveTest(*logicFunction);
+            //        auto result = SATSolver::solveHighPerfomance(*logicFunction);
+            auto result = SATSolver::solveHighPerfomanceNoStack(*logicFunction);
+            auto endTime = high_resolution_clock::now();
+            
+            auto duration = duration_cast<milliseconds>(endTime - startTime);
+            
+            std::cout<<"Operation longs: "<<duration.count()<<std::endl<<std::endl;
+            
+            if(result) {
+                std::cout << "SAT: ";
+                for(int i = 1; i <= logicFunction->getAmountOfLiterals();i++) std::cout << (*result)[i] << " ";
+                std::cout << std::endl;
+                
+                std::cout<<"isCorrect: "<<(logicFunction->isCorrectOnVector() ? "CORRECT" : "INCORRECT")<<std::endl;
+            } else {
+                std::cout << "UNSAT" << std::endl;
+            }
         }
     }
     return 0;

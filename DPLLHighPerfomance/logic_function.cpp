@@ -17,6 +17,9 @@ LogicFunction::LogicFunction(std::vector<ClauseNode*>& lf, int _amountOfLiterals
     this->positiveClauses = new std::vector<ClauseNode*>*[_amountOfLiterals+1];
     this->negativeClauses = new std::vector<ClauseNode*>*[_amountOfLiterals+1];
     
+    memset(literalMarks,0,(_amountOfLiterals+1)*sizeof(int));
+    memset(literalMarksStepsChanged,0,(_amountOfLiterals+1)*sizeof(int));
+    
     for(int i = 1; i <= _amountOfLiterals; i++) {
         this->positiveClauses[i] = new std::vector<ClauseNode*>();
         this->negativeClauses[i] = new std::vector<ClauseNode*>();
@@ -27,9 +30,6 @@ LogicFunction::LogicFunction(std::vector<ClauseNode*>& lf, int _amountOfLiterals
         
         for(auto literal = (*clause)->begin(); literal != (*clause)->end(); ++literal) {
             int term = std::abs(*literal);
-//            if (*literal == -24) {
-//                std::cout<<"some interesting literal"<<std::endl;
-//            }
             if (*literal > 0) {
                 this->positiveClauses[term]->push_back(*clause);
             } else {
@@ -141,6 +141,32 @@ bool LogicFunction::isCorrectFast() {
     
     END_INTERNAL_LOOP:
                 ++clause;
+    }
+    
+    return true;
+}
+
+bool LogicFunction::isCorrectSlow() {
+    int counter = 0;
+    
+    for(auto clause = logicFunction.begin(); clause != logicFunction.end(); ++clause){
+        
+        counter = 0;
+        
+        for(auto literal = (*clause)->begin();literal != (*clause)->end(); ++literal) {
+            
+            int term = std::abs(*literal);
+            
+            if ((literalMarks[term] == TRUEL && *literal < 0) || (literalMarks[term] == FALSEL && *literal > 0)) {
+                counter++;
+            }
+            
+        }
+        
+        if (counter == (*clause)->amountOfLiterals()) {
+            
+            return false;
+        }
     }
     
     return true;
@@ -265,23 +291,66 @@ bool LogicFunction::isCorrectFast(int term, int posibleState) {
     return true;
 }
 
-
-void LogicFunction::updateState(int term) {
+bool LogicFunction::isCorrectSlow(int term, int posibleState) {
+    int startState = literalMarks[term] ;
+    literalMarks[term] = posibleState;
+    int counter = 0;
+    
     for(auto clause = logicFunction.begin(); clause != logicFunction.end(); ++clause){
         
-        if((*clause)->isTrue()) continue;
+        counter = 0;
         
         for(auto literal = (*clause)->begin();literal != (*clause)->end(); ++literal) {
-            int termInternal = std::abs(*literal);
-            if(term == termInternal) {
-                if ((literalMarks[termInternal] == TRUEL && *literal > 0) ||
-                    (literalMarks[termInternal] == FALSEL && *literal < 0)) {
-                    (*clause)->setMark(true,step);
-                    break;
-                }
+            
+            int term = std::abs(*literal);
+            
+            if ((literalMarks[term] == TRUEL && *literal < 0) || (literalMarks[term] == FALSEL && *literal > 0)) {
+                counter++;
+            }
+            
+        }
+        
+        if (counter == (*clause)->amountOfLiterals()) {
+            literalMarks[term] = startState;
+            return false;
+        }
+    }
+    
+    literalMarks[term] = startState;
+    return true;
+}
+
+
+void LogicFunction::updateState(int term) {
+    if(literalMarks[term] == TRUEL) {
+        for(auto clause = positiveClauses[term]->begin(); clause != positiveClauses[term]->end(); ++ clause) {
+            if (!(*clause)->isTrue()){
+                (*clause)->setMark(true, step);
+            }
+        }
+    } else if(literalMarks[term] == FALSEL){
+        for(auto clause = negativeClauses[term]->begin(); clause != negativeClauses[term]->end(); ++ clause) {
+            if (!(*clause)->isTrue()){
+                (*clause)->setMark(true, step);
             }
         }
     }
+    
+//    for(auto clause = logicFunction.begin(); clause != logicFunction.end(); ++clause){
+//
+//        if((*clause)->isTrue()) continue;
+//
+//        for(auto literal = (*clause)->begin();literal != (*clause)->end(); ++literal) {
+//            int termInternal = std::abs(*literal);
+//            if(term == termInternal) {
+//                if ((literalMarks[termInternal] == TRUEL && *literal > 0) ||
+//                    (literalMarks[termInternal] == FALSEL && *literal < 0)) {
+//                    (*clause)->setMark(true,step);
+//                    break;
+//                }
+//            }
+//        }
+//    }
 }
 
 std::optional<int> LogicFunction::getFirstUnmarkedLiteralIfExistTrue() {
@@ -341,21 +410,40 @@ void LogicFunction::markLiteral(int term, bool _mark) {
 void LogicFunction::remarkLiteral(int term, bool _mark) {
     literalMarks[term] = _mark ? TRUEL : FALSEL;
     
-    for(auto clause = logicFunction.begin(); clause != logicFunction.end(); ++clause){
-        
-        if((*clause)->isTrueOnStepOrMarkFalse(step)) continue;
-        
-        for(auto literal = (*clause)->begin();literal != (*clause)->end(); ++literal) {
-            int termInternal = std::abs(*literal);
-            if(term == termInternal) {
-                if ((literalMarks[termInternal] == TRUEL && *literal > 0) ||
-                    (literalMarks[termInternal] == FALSEL && *literal < 0)) {
-                    (*clause)->setMark(true,step);
-                    break;
-                }
+    if (_mark) {
+        for(auto clause = positiveClauses[term]->begin(); clause != positiveClauses[term]->end(); ++ clause) {
+            if (!(*clause)->isTrue()){
+                (*clause)->setMark(true, step);
             }
         }
+        for(auto clause = negativeClauses[term]->begin(); clause != negativeClauses[term]->end(); ++ clause) {
+            (*clause)->isTrueOnStepOrMarkFalse(step);
+        }
+    } else {
+        for(auto clause = negativeClauses[term]->begin(); clause != negativeClauses[term]->end(); ++ clause) {
+            if (!(*clause)->isTrue()){
+                (*clause)->setMark(true, step);
+            }
+        }
+        for(auto clause = positiveClauses[term]->begin(); clause != positiveClauses[term]->end(); ++ clause) {
+            (*clause)->isTrueOnStepOrMarkFalse(step);
+        }
     }
+//    for(auto clause = logicFunction.begin(); clause != logicFunction.end(); ++clause){
+//
+//        if((*clause)->isTrueOnStepOrMarkFalse(step)) continue;
+//
+//        for(auto literal = (*clause)->begin();literal != (*clause)->end(); ++literal) {
+//            int termInternal = std::abs(*literal);
+//            if(term == termInternal) {
+//                if ((literalMarks[termInternal] == TRUEL && *literal > 0) ||
+//                    (literalMarks[termInternal] == FALSEL && *literal < 0)) {
+//                    (*clause)->setMark(true,step);
+//                    break;
+//                }
+//            }
+//        }
+//    }
 }
 
 void LogicFunction::nextStep() {
@@ -841,7 +929,7 @@ void LogicFunction::unitPropagationHighPerfArrayMapRetryHighPerf() {
         }
     }
     
-    memcpy(unitLiteralsArrayCache,unitLiteralsArray,amountOfLiterals*sizeof(int));
+    memcpy(unitLiteralsArrayCache,unitLiteralsArray,(amountOfLiterals+1)*sizeof(int));
     
     for(int i = 1; i <= amountOfLiterals; i++) {
         if (unitLiteralsArrayCache[i] != 0) {

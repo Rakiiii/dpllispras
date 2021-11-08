@@ -42,8 +42,10 @@ public:
     
     bool isCorrect();
     bool isCorrectFast();
+    bool isCorrectSlow();
     bool isCorrect(int term,int posibleState);
     bool isCorrectFast(int term,int posibleState);
+    bool isCorrectSlow(int term,int posibleState);
     bool isCorrectOnVector();
     
     void findPureLiterals();

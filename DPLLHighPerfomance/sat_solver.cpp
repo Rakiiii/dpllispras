@@ -403,7 +403,7 @@ std::optional<int*> SATSolver::solveHighPerfomanceNoStack(LogicFunction &logicFu
                 
                 isCorrect = logicFunction.isCorrectFast(literalStack[stackCup], FALSEL);
                 
-                amountOfRollbackSteps = 2;
+                amountOfRollbackSteps = 1;
             }
             
             logicFunction.nextStep();
@@ -454,11 +454,11 @@ std::optional<int*> SATSolver::solveHighPerfomanceNoStack(LogicFunction &logicFu
                 
                 //todo::написать метод который проверяет корректность и ролбэчит в 1 методе
                 //todo::может не ролбэчить а опять же временно марчить
-                logicFunction.rollbackSteps(amountOfRollbackSteps+1);
+                logicFunction.rollbackSteps(amountOfRollbackSteps);
                 
                 isCorrect = logicFunction.isCorrectFast(literalStack[stackCup], FALSEL);
                 
-                amountOfRollbackSteps = 2;
+                amountOfRollbackSteps = 1;
             }
             
             //todo::как-то оптимизировать этот финт ушами а то хреново выглядит
